@@ -7,7 +7,7 @@ def read_input():
       return (text.rstrip(), line.rstrip())
 
     if ("F" in choice) or ("f" in choice):
-      name = "tests/"+input()
+      name = "tests/06"#+input()
       with open(name) as file:
         text = file.readline();
         line = file.readline();
@@ -45,6 +45,7 @@ def get_occurrences(pattern, text):
         j=j+1
         if j==len_pat:
           result=result+str(i)+" "
+          
 
       if i<len_txt-len_pat:
         k2=(b*(k2-ord(text[i])*m) + ord(text[i+len_pat]))%q
@@ -54,7 +55,7 @@ def get_occurrences(pattern, text):
 
     
     # and return an iterable variable
-    return result
+    return result.rstrip()
 
 
 # this part launches the functions
